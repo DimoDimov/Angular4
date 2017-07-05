@@ -17,22 +17,28 @@ import { HeroDetailComponent } from './hero-detail.component';
 import { HeroService } from './hero.service';
 import  { HeroSearchComponent } from './hero-search.component';
 
+import { Pane, Tab, ContentChildComp } from './content-child';
+import { PaneViewChild, ViewChildComp } from './view-child';
+
+
 @NgModule({
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
     HttpModule,
-    InMemoryWebApiModule.forRoot(InMemoryDataService)],
+    InMemoryWebApiModule.forRoot(InMemoryDataService) ],
   declarations: [
     AppComponent,
     DashboardComponent,
     HeroesComponent,
     SizerComponent,
     HeroDetailComponent,
-    HeroSearchComponent],
-  bootstrap: [AppComponent],
-  providers: [HeroService]
+    HeroSearchComponent,
+    Pane, Tab, ContentChildComp,
+    PaneViewChild, ViewChildComp],
+  bootstrap: [ AppComponent ],
+  providers: [ HeroService ]
 })
 export class AppModule {
 }
